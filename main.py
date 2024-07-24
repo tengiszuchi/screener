@@ -87,32 +87,32 @@ flag_to_country_code = {
 }
 
 virgin_messages = [
-    "Virgin API Consumer: Fears HTML",
-    "Virgin API Consumer: Limited to what the API can do",
-    "Virgin API Consumer: Has to identify himself even for read-only APIs",
-    "Virgin API Consumer: API provider takes away his endpoint",
-    "Virgin API Consumer: 429 too many requests",
-    "Virgin API Consumer: Has to worry about quota",
-    "Virgin API Consumer: Thinks that he is making his life easier",
-    "Virgin API Consumer: Begs his users for Oauth",
-    "Virgin API Consumer: API keys (lol)",
-    "Virgin API Consumer: Data is 10 minutes behind anyways",
-    "Virgin API Consumer: Has to verify his email, phone, driver's license, SSN, DNA sample",
-    "Virgin API Consumer: Has to agree to ToS and follow the rules (LMAO)"
+    "virgin API consoomer fears HTML",
+    "virgin API consoomer limited to what the API can do",
+    "virgin API consoomer has to identify himself even for read-only APIs",
+    "virgin API consoomer API provider takes away his endpoint",
+    "virgin API consoomer 429 too many requests",
+    "virgin API consoomer has to worry about quota",
+    "virgin API consoomer thinks that he is making his life easier",
+    "virgin API consoomer begs his users for Oauth",
+    "virgin API consoomer API keys (lol)",
+    "virgin API consoomer data is 10 minutes behind anyways",
+    "virgin API consoomer has to verify his email, phone, driver's license, SSN, DNA sample",
+    "virgin API consoomer has to agree to ToS and follow the rules (LMAO)"
 ]
 
 chad_messages = [
-    "Chad Third Party Scraper: Follows no rules, doesn’t agree to any terms and service",
-    "Chad Third Party Scraper: Scrapes so fast the backend crashes",
-    "Chad Third Party Scraper: Has no limitations and can access any data he wants",
-    "Chad Third Party Scraper: Entire industries are dedicated to stopping him",
-    "Chad Third Party Scraper: Website thinks his user agent is a phone",
-    "Chad Third Party Scraper: Promising career at high-frequency trading firm (just scrapes in spare time)",
-    "Chad Third Party Scraper: Pays Indians to solve captchas",
-    "Chad Third Party Scraper: Can work anonymously",
-    "Chad Third Party Scraper: curl://",
-    "Chad Third Party Scraper: Selenium goat",
-    "Chad Third Party Scraper: Millions of engineer hours can’t stop him from scraping"
+    "Chad 3rd party scraper follows no rules, doesn’t agree to any terms and service",
+    "Chad 3rd party scraper scrapes so fast the backend crashes",
+    "Chad 3rd party scraper has no limitations and can access any data he wants",
+    "Chad 3rd party scraper entire industries are dedicated to stopping him",
+    "Chad 3rd party scraper website thinks his user agent is a phone",
+    "Chad 3rd party scraper promising career at high-frequency trading firm (just scrapes in spare time)",
+    "Chad 3rd party scraper pays Indians to solve captchas",
+    "Chad 3rd party scraper can work anonymously",
+    "Chad 3rd party scraper curl://",
+    "Chad 3rd party scraper Selenium goat",
+    "Chad 3rd party scraper millions of engineer hours can’t stop him from scraping"
 ]
 
 def print_random_message():
