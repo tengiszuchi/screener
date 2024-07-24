@@ -1,11 +1,11 @@
-# Market Cap Scraper
+# Company market cap financial data scraper 
 
 This script scrapes the largest companies by market capitalization from various countries and regions listed on the website [companiesmarketcap.com](https://companiesmarketcap.com/) and saves the data to CSV files. The script is designed to run continuously, scraping data every minute.
 
 ## Features
 
 - Scrapes company rankings, names, market capitalizations, share prices, and country information.
-- Saves the scraped data to CSV files in the `output` directory.
+- Saves the scraped data via DataFrame to CSV files in the `output` directory.
 - Prints progress updates and timing information to the terminal.
 
 ## Installation Requirements
@@ -47,3 +47,7 @@ The script uses Selenium to open each URL and BeautifulSoup to parse the HTML co
 ### Continuous Running
 
 The script runs in an infinite loop, with a 60-second sleep interval between each iteration, ensuring that the data is scraped continuously every minute.
+
+### Issues
+
+There is no unit test for case where the user of this script is IP-blocked by the site which would cause the script to output bad data.
