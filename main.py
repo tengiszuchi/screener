@@ -94,53 +94,60 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 
 service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service, options=chrome_options)
 
-total_start_time = time.time()
+while True:
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+    
+    total_start_time = time.time()
+    
+    urls_scraped = 0
+    csvs_created = 0
+    
+    for url, filename in url_filename_map.items():
+        print(f"Opening {url}")
+        start_time = time.time()
+        driver.get(url)
+        driver.implicitly_wait(10)
+        print(f"Started scraping {url}")
+    
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+    
+        table = soup.find('table', {'class': 'default-table table marketcap-table dataTable'})
+    
+        data = []
+        for row in table.tbody.find_all('tr'):
+            columns = row.find_all('td')
+            if len(columns) >= 5:
+                rank = columns[1].text.strip()
+                name = columns[2].find('div', {'class': 'company-name'}).text.strip()
+                market_cap = columns[3].text.strip()
+                price = columns[4].text.strip()
+                country_flag = columns[7].text.strip().split()[0]
+                country_code = get_country_code(country_flag)
+                data.append([rank, name, market_cap, price, country_code])
+                print(f"Finished scraping {name} at {market_cap} total market cap at {price} price per share")
+    
+        df = pd.DataFrame(data, columns=['Rank', 'Name', 'Market Cap', 'Price', 'Country'])
+    
+        output_path = os.path.join("output", filename)
+        df.to_csv(output_path, index=False)
+        print(f"Finished scraping {url} and saved to {output_path}")
+    
+        urls_scraped += 1
+        csvs_created += 1
+    
+        end_time = time.time()
+        print(f"Time taken for {url}: {end_time - start_time:.2f} seconds")
+    
+    driver.quit()
+    
+    total_end_time = time.time()
+    total_time_taken = total_end_time - total_start_time
+    
+    print(f"Total URLs scraped: {urls_scraped}")
+    print(f"Total CSVs created: {csvs_created}")
+    print(f"Total time taken: {total_time_taken:.2f} seconds")
+    
+    print("Sleeping for 60 seconds before the next run...")
+    time.sleep(60)
 
-urls_scraped = 0
-csvs_created = 0
-
-for url, filename in url_filename_map.items():
-    print(f"Opening {url}")
-    start_time = time.time()
-    driver.get(url)
-    driver.implicitly_wait(10)
-    print(f"Started scraping {url}")
-
-    soup = BeautifulSoup(driver.page_source, 'html.parser')
-
-    table = soup.find('table', {'class': 'default-table table marketcap-table dataTable'})
-
-    data = []
-    for row in table.tbody.find_all('tr'):
-        columns = row.find_all('td')
-        if len(columns) >= 5:
-            rank = columns[1].text.strip()
-            name = columns[2].find('div', {'class': 'company-name'}).text.strip()
-            market_cap = columns[3].text.strip()
-            price = columns[4].text.strip()
-            country_flag = columns[7].text.strip().split()[0]
-            country_code = get_country_code(country_flag)
-            data.append([rank, name, market_cap, price, country_code])
-
-    df = pd.DataFrame(data, columns=['Rank', 'Name', 'Market Cap', 'Price', 'Country'])
-
-    output_path = os.path.join("output", filename)
-    df.to_csv(output_path, index=False)
-    print(f"Finished scraping {url} and saved to {output_path}")
-
-    urls_scraped += 1
-    csvs_created += 1
-
-    end_time = time.time()
-    print(f"Time taken for {url}: {end_time - start_time:.2f} seconds")
-
-driver.quit()
-
-total_end_time = time.time()
-total_time_taken = total_end_time - total_start_time
-
-print(f"Total URLs scraped: {urls_scraped}")
-print(f"Total CSVs created: {csvs_created}")
-print(f"Total time taken: {total_time_taken:.2f} seconds")
