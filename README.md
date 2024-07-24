@@ -51,3 +51,11 @@ The script runs in an infinite loop, with a 60-second sleep interval between eac
 ### Issues
 
 There is no unit test for case where the user of this script is IP-blocked by the site which would cause the script to output bad data.
+
+The script currently only does the first page, it should be able to do the second to the nth page after, this would require a unit test wherin nothing is found and if so, it should not continue on the specific URL.
+
+The script currently does not do asset classes and industries/sector pages provided by companiesmarketcap.com.
+
+The script could also scrape the company logo.
+
+The script should include a timestamp line in the output CSV.
