@@ -1,4 +1,5 @@
 import os
+import random
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -85,6 +86,41 @@ flag_to_country_code = {
     "🇦🇹": "AT"
 }
 
+virgin_messages = [
+    "Virgin API Consumer: Fears HTML",
+    "Virgin API Consumer: Limited to what the API can do",
+    "Virgin API Consumer: Has to identify himself even for read-only APIs",
+    "Virgin API Consumer: API provider takes away his endpoint",
+    "Virgin API Consumer: 429 too many requests",
+    "Virgin API Consumer: Has to worry about quota",
+    "Virgin API Consumer: Thinks that he is making his life easier",
+    "Virgin API Consumer: Begs his users for Oauth",
+    "Virgin API Consumer: API keys (lol)",
+    "Virgin API Consumer: Data is 10 minutes behind anyways",
+    "Virgin API Consumer: Has to verify his email, phone, driver's license, SSN, DNA sample",
+    "Virgin API Consumer: Has to agree to ToS and follow the rules (LMAO)"
+]
+
+chad_messages = [
+    "Chad Third Party Scraper: Follows no rules, doesn’t agree to any terms and service",
+    "Chad Third Party Scraper: Scrapes so fast the backend crashes",
+    "Chad Third Party Scraper: Has no limitations and can access any data he wants",
+    "Chad Third Party Scraper: Entire industries are dedicated to stopping him",
+    "Chad Third Party Scraper: Website thinks his user agent is a phone",
+    "Chad Third Party Scraper: Promising career at high-frequency trading firm (just scrapes in spare time)",
+    "Chad Third Party Scraper: Pays Indians to solve captchas",
+    "Chad Third Party Scraper: Can work anonymously",
+    "Chad Third Party Scraper: curl://",
+    "Chad Third Party Scraper: Selenium goat",
+    "Chad Third Party Scraper: Millions of engineer hours can’t stop him from scraping"
+]
+
+def print_random_message():
+    if random.choice([True, False]):
+        print(random.choice(virgin_messages))
+    else:
+        print(random.choice(chad_messages))
+
 def get_country_code(flag_emoji):
     return flag_to_country_code.get(flag_emoji, 'Unknown')
 
@@ -149,5 +185,6 @@ while True:
     print(f"Total time taken: {total_time_taken:.2f} seconds")
     
     print("Sleeping for 60 seconds before the next run...")
-    time.sleep(60)
-
+    for _ in range(60):
+        print_random_message()
+        time.sleep(1)
