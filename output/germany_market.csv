@@ -1,0 +1,101 @@
+Rank,Name,Market Cap,Price,Country
+1,SAP,$267.68 B,$229.48,DE
+2,Siemens,$158.18 B,$200.26,DE
+3,Deutsche Telekom,$150.22 B,$30.17,DE
+4,Allianz,$127.56 B,$325.87,DE
+5,Merck KGaA,$76.08 B,$175.00,DE
+6,Munich RE (Münchener Rück),$70.95 B,$530.46,DE
+7,Porsche,$66.62 B,$73.14,DE
+8,Mercedes-Benz,$65.97 B,$61.67,DE
+9,Siemens Healthineers,$62.88 B,$56.22,DE
+10,BMW,$51.48 B,$81.01,DE
+11,Volkswagen,$50.64 B,$98.50,DE
+12,DHL Group (Deutsche Post),$47.60 B,$40.73,DE
+13,BASF,$44.93 B,$50.34,DE
+114,Deutsche Börse,$43.14 B,$234.99,DE
+115,Adidas,$43.00 B,$240.83,DE
+16,Infineon,$42.07 B,$32.43,DE
+17,E.ON,$36.61 B,$14.02,DE
+18,Henkel,$35.86 B,$90.73,DE
+19,Deutsche Bank,$34.02 B,$17.47,DE
+20,Hannover Rück,$33.03 B,$273.94,DE
+21,Daimler Truck,$32.64 B,$40.87,DE
+22,Beiersdorf,$31.45 B,$139.73,DE
+23,Siemens Energy,$31.45 B,$39.61,DE
+24,Hapag-Lloyd,$30.91 B,$175.92,DE
+25,Vonovia,$27.86 B,$33.86,DE
+26,Bayer,$27.74 B,$28.24,DE
+27,BioNTech,$26.52 B,$111.58,DE
+28,RWE,$25.38 B,$34.12,DE
+29,Rheinmetall,$23.06 B,$530.78,DE
+30,Talanx,$20.91 B,$80.98,DE
+31,Commerzbank,$20.82 B,$17.58,DE
+32,Uniper,$20.68 B,$49.66,DE
+33,Fresenius,$20.55 B,$36.49,DE
+134,EnBW Energie,$19.34 B,$71.41,DE
+135,HeidelbergCement,$19.25 B,$106.31,DE
+36,MTU Aero Engines,$18.00 B,$334.85,DE
+137,Symrise,$17.73 B,$126.91,DE
+138,Sartorius,$16.80 B,$215.95,DE
+39,Traton,$16.44 B,$32.89,DE
+40,Knorr-Bremse,$14.05 B,$87.20,DE
+41,Porsche SE,$13.23 B,$43.20,DE
+42,Continental,$13.04 B,$65.24,DE
+43,Nemetschek,$12.70 B,$108.73,DE
+44,Fresenius Medical Care,$12.32 B,$21.01,DE
+45,Covestro,$11.94 B,$63.20,DE
+46,Delivery Hero,$11.66 B,$41.60,DE
+47,Rational AG,$11.42 B,"$1,005",DE
+248,HELLA,$10.68 B,$94.45,DE
+149,Evonik Industries,$10.51 B,$22.57,DE
+150,Deutsche Wohnen,$10.32 B,$26.02,DE
+51,CTS Eventim,$10.24 B,$106.73,DE
+52,Brenntag,$9.88 B,$68.48,DE
+153,Hochtief,$9.59 B,$127.34,DE
+154,Birkenstock,$9.59 B,$51.06,DE
+55,Lufthansa,$8.66 B,$7.23,DE
+56,GEA Group,$8.46 B,$50.57,DE
+157,DWS Group,$8.36 B,$41.85,DE
+158,Zalando,$8.35 B,$32.08,DE
+59,LEG Immobilien,$7.25 B,$97.39,DE
+260,Carl Zeiss Meditec,$6.58 B,$68.70,DE
+161,Scout24,$6.43 B,$86.98,DE
+162,PUMA,$6.39 B,$42.83,DE
+63,Fuchs Petrolub,$5.43 B,$35.97,DE
+164,SCHOTT Pharma,$5.05 B,$33.54,DE
+165,KION Group,$4.99 B,$38.08,DE
+66,Bechtle,$4.95 B,$39.29,DE
+67,Fraport,$4.84 B,$52.47,DE
+68,Wacker Chemie,$4.53 B,$91.27,DE
+169,Fielmann,$4.31 B,$50.85,DE
+170,Krones,$4.28 B,$135.67,DE
+71,TUI,$4.10 B,$8.04,DE
+172,Hensoldt,$3.87 B,$33.43,DE
+173,United Internet,$3.83 B,$21.70,DE
+274,DMG Mori,$3.82 B,$48.14,DE
+175,IONOS Group,$3.63 B,$25.53,DE
+176,Freenet,$3.61 B,$30.36,DE
+277,Ströer,$3.51 B,$62.05,DE
+178,Sixt,$3.43 B,$79.20,DE
+179,Nordex,$3.42 B,$14.48,DE
+80,Schaeffler,$3.33 B,$5.01,DE
+181,Aurubis,$3.24 B,$74.22,DE
+182,HUGO BOSS,$3.17 B,$46.07,DE
+283,Gerresheimer,$3.17 B,$92.02,DE
+84,TAG Immobilien,$3.06 B,$17.46,DE
+85,Encavis,$3.00 B,$18.61,DE
+86,Morphosys,$2.85 B,$18.96,DE
+287,LEW (Lechwerke),$2.78 B,$78.44,DE
+188,Jungheinrich,$2.73 B,$27.05,DE
+189,Lanxess,$2.70 B,$31.32,DE
+90,1&1,$2.70 B,$15.32,DE
+91,SYNLAB,$2.69 B,$12.26,DE
+92,Südzucker,$2.46 B,$12.07,DE
+193,Douglas Group,$2.37 B,$22.03,DE
+994,Northern Data AG,$2.36 B,$37.65,DE
+295,Atoss,$2.34 B,$147.14,DE
+196,Thyssenkrupp,$2.31 B,$3.70,DE
+197,Tradegate Exchange,$2.30 B,$94.67,DE
+98,Vitesco Technologies Group,$2.29 B,$57.23,DE
+299,KWS,$2.28 B,$68.92,DE
+1100,TeamViewer,$2.27 B,$14.24,DE

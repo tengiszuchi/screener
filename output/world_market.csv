@@ -1,0 +1,101 @@
+Rank,Name,Market Cap,Price,Country
+1,Apple,$3.595 T,$236.48,US
+2,NVIDIA,$3.525 T,$143.71,US
+3,Microsoft,$3.112 T,$418.78,US
+4,Alphabet (Google),$2.029 T,$165.80,US
+5,Amazon,$1.984 T,$189.07,US
+6,Saudi Aramco,$1.746 T,$7.22,SA
+7,Meta Platforms (Facebook),$1.455 T,$575.16,US
+8,TSMC,$1.047 T,$201.95,TW
+9,Berkshire Hathaway,$1.001 T,$464.16,US
+10,Broadcom,$840.65 B,$179.99,US
+11,Eli Lilly,$815.90 B,$906.13,US
+12,Tesla,$699.14 B,$218.85,US
+13,Walmart,$649.57 B,$80.81,US
+14,JPMorgan Chase,$627.81 B,$223.00,US
+15,Visa,$558.17 B,$286.85,US
+16,Exxon Mobil,$533.49 B,$120.08,US
+17,UnitedHealth,$527.70 B,$571.47,US
+18,Novo Nordisk,$518.17 B,$117.33,DK
+19,Tencent,$500.65 B,$54.14,CN
+20,Oracle,$481.49 B,$173.76,US
+21,Mastercard,$475.78 B,$515.01,US
+22,Home Depot,$403.67 B,$406.40,US
+23,Procter & Gamble,$399.27 B,$169.54,US
+124,Costco,$392.90 B,$886.77,US
+125,Johnson & Johnson,$391.97 B,$162.83,US
+226,Netflix,$331.34 B,$772.07,US
+127,LVMH,$329.91 B,$661.04,FR
+128,AbbVie,$329.49 B,$186.54,US
+29,Bank of America,$321.08 B,$41.76,US
+30,Coca-Cola,$299.32 B,$69.45,US
+31,ICBC,$286.52 B,$0.60,CN
+32,Samsung,$285.05 B,$42.76,KR
+33,ASML,$280.78 B,$714.10,NL
+34,Salesforce,$278.47 B,$291.29,US
+135,Chevron,$273.80 B,$150.88,US
+136,Kweichow Moutai,$269.77 B,$214.75,CN
+237,Merck,$269.55 B,$106.34,US
+38,SAP,$267.68 B,$229.48,DE
+39,T-Mobile US,$259.92 B,$222.77,US
+40,Nestlé,$256.55 B,$99.77,CH
+141,AMD,$255.55 B,$157.90,US
+142,Roche,$254.48 B,$315.29,CH
+43,Alibaba,$244.00 B,$100.91,CN
+144,International Holding Company,$241.88 B,$110.27,Unknown
+145,Pepsico,$240.11 B,$175.01,US
+246,AstraZeneca,$240.10 B,$77.44,GB
+347,Accenture,$234.96 B,$376.03,IE
+48,Hermès,$234.32 B,"$2,235",FR
+49,Novartis,$234.30 B,$115.73,CH
+350,Agricultural Bank of China,$232.49 B,$0.68,CN
+51,Linde,$230.80 B,$483.36,GB
+52,Thermo Fisher Scientific,$227.42 B,$595.37,US
+53,McDonald,$225.88 B,$314.89,US
+54,Cisco,$225.83 B,$56.59,US
+55,Toyota,$222.45 B,$169.17,JP
+156,Reliance Industries,$220.39 B,$32.57,IN
+157,Adobe,$219.09 B,$497.71,US
+258,Wells Fargo,$217.90 B,$64.02,US
+159,IBM,$213.47 B,$231.75,US
+260,General Electric,$210.60 B,$194.23,US
+261,L'Oréal,$210.00 B,$393.49,FR
+162,PetroChina,$208.84 B,$1.19,CN
+63,China Mobile,$207.02 B,$9.42,CN
+164,Shell,$206.77 B,$67.05,GB
+165,Abbott Laboratories,$203.55 B,$116.99,US
+66,China Construction Bank,$197.67 B,$1.14,CN
+67,Danaher,$196.50 B,$272.09,US
+168,American Express,$190.72 B,$270.74,US
+169,Morgan Stanley,$190.66 B,$118.28,US
+170,Caterpillar,$189.34 B,$390.48,US
+271,ServiceNow,$189.04 B,$918.34,US
+72,QUALCOMM,$188.27 B,$169.01,US
+373,Bank of China,$187.07 B,$0.70,CN
+74,Philip Morris,$184.95 B,$118.96,US
+175,Intuitive Surgical,$184.80 B,$518.86,US
+176,Verizon,$183.95 B,$43.70,US
+277,Prosus,$183.79 B,$42.06,NL
+78,Inditex,$182.67 B,$29.34,ES
+79,Texas Instruments,$178.74 B,$195.77,US
+80,Royal Bank Of Canada,$176.96 B,$124.99,CA
+81,Tata Consultancy Services,$175.58 B,$48.53,IN
+82,Walt Disney,$175.22 B,$96.62,US
+183,Pinduoduo,$173.40 B,$124.86,CN
+184,Nextera Energy,$172.71 B,$84.03,US
+285,Fomento Económico Mexicano,$172.16 B,$98.27,MX
+86,Intuit,$172.07 B,$613.93,US
+287,Amgen,$170.19 B,$316.74,US
+288,Uber,$169.04 B,$80.46,US
+189,Raytheon Technologies,$167.47 B,$125.90,US
+190,Pfizer,$163.93 B,$28.93,US
+191,S&P Global,$163.75 B,$523.19,US
+392,Goldman Sachs,$163.52 B,$517.80,US
+893,HDFC Bank,$161.51 B,$63.50,IN
+294,Commonwealth Bank,$160.91 B,$96.24,AU
+295,HSBC,$160.68 B,$44.18,GB
+196,Arm Holdings,$159.66 B,$152.35,GB
+197,Siemens,$158.18 B,$200.26,DE
+198,Lowe's Companies,$157.04 B,$276.84,US
+599,Comcast,$156.95 B,$40.53,US
+2100,CATL,$156.67 B,$35.59,CN
