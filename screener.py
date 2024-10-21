@@ -8,11 +8,38 @@ from rich.text import Text
 from rich.panel import Panel
 import random
 
-# Path to specific CSV file
-world_market_file = os.path.join("output", "world_market.csv")
+def list_csv_files(directory):
+    """List all CSV files in the specified directory."""
+    return [f for f in os.listdir(directory) if f.endswith('.csv')]
+
+def select_csv_file():
+    """Prompt the user to select a CSV file from the output directory."""
+    output_directory = "output"
+    csv_files = list_csv_files(output_directory)
+    
+    if not csv_files:
+        print("No CSV files found in the 'output' directory.")
+        return None
+    
+    print("Available CSV files:")
+    for idx, file in enumerate(csv_files):
+        print(f"{idx + 1}. {file}")
+    
+    # Get user's choice
+    while True:
+        try:
+            choice = int(input(f"Select a file (1-{len(csv_files)}): "))
+            if 1 <= choice <= len(csv_files):
+                selected_file = os.path.join(output_directory, csv_files[choice - 1])
+                print(f"Selected file: {csv_files[choice - 1]}")
+                return selected_file
+            else:
+                print("Invalid choice. Please try again.")
+        except ValueError:
+            print("Please enter a valid number.")
 
 def load_data(world_market_file):
-    # Check if the file exists before attempting to read
+    """Load data from the specified CSV file."""
     if os.path.exists(world_market_file):
         df = pd.read_csv(world_market_file)
         return df
@@ -44,11 +71,11 @@ def generate_gradient_color(start_rgb, end_rgb, steps):
 
 def display_terminal_title(console, start_color, end_color):
     # Create a gradient for the title text
-    gradient_colors = generate_gradient_color(start_color, end_color, len("SommerTerminal"))
+    gradient_colors = generate_gradient_color(start_color, end_color, len("Screener"))
     title_text = Text()
 
     # Apply gradient to each letter
-    for idx, char in enumerate("SommerTerminal"):
+    for idx, char in enumerate("Screener"):
         color = gradient_colors[idx]
         title_text.append(char, style=Style(color=color, bold=True))
     
@@ -136,22 +163,28 @@ def display_chart(data):
     plt.show()
 
 def main():
-    data = load_data(world_market_file)
+    # Prompt the user to select a CSV file
+    selected_file = select_csv_file()
     
-    if data is not None:
-        display_table(data)  # Now showing 50 companies
+    if selected_file:
+        data = load_data(selected_file)
         
-        # Define the start and end colors for the gradient
-        start_color = (30, 144, 255)  # Light blue
-        end_color = (255, 69, 0)      # Red
+        if data is not None:
+            display_table(data)  # Now showing 50 companies
+            
+            # Define the start and end colors for the gradient
+            start_color = (30, 144, 255)  # Light blue
+            end_color = (255, 69, 0)      # Red
 
-        # Show a random company in a focus window
-        display_focus_window(data, start_color, end_color)
-        
-        print("\nGenerating chart...")
-        display_chart(data)
+            # Show a random company in a focus window
+            display_focus_window(data, start_color, end_color)
+            
+            print("\nGenerating chart...")
+            display_chart(data)
+        else:
+            print("No data found. Please ensure the selected CSV file is valid.")
     else:
-        print("No data found. Please ensure 'world_market.csv' is available in the 'output' directory.")
+        print("No file selected. Exiting.")
 
 if __name__ == "__main__":
     main()
