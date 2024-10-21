@@ -1,61 +1,108 @@
-# Company market cap financial data scraper 
+# Screener
 
-This script scrapes the largest companies by market capitalization from various countries and regions listed on the website [companiesmarketcap.com](https://companiesmarketcap.com/) and saves the data to CSV files. The script is designed to run continuously, scraping data every minute.
+The **Screener** project scrapes market data from various countries' stock market pages on the [companiesmarketcap.com](https://companiesmarketcap.com/) website. It extracts information such as the rank, company name, market cap, price, and country, and saves the data into CSV files for further analysis. Additionally, the project provides a script to launch the scraper in a new terminal window.
 
-## Features
+## Table of Contents
 
-- Scrapes company rankings, names, market capitalizations, share prices, and country information.
-- Saves the scraped data via DataFrame to CSV files in the `output` directory.
-- Prints progress updates and timing information to the terminal.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Files Description](#files-description)
+- [Notes](#notes)
 
-## Installation Requirements
+## Installation
 
-1. **Python**: Make sure you have Python 3.x installed on your system.
+Before using this project, ensure you have the following prerequisites installed:
 
-2. **Install required Python packages**:
-    ```bash
-    pip install selenium beautifulsoup4 pandas webdriver-manager
-    ```
+1. **Python 3.x** - You can download it [here](https://www.python.org/downloads/).
+2. **Google Chrome** - The scraper uses Chrome for web scraping.
+3. **Chrome WebDriver** - Installable via `webdriver_manager`.
 
-3. **Google Chrome**: The script uses Google Chrome for web scraping. Ensure you have Google Chrome installed.
+### Step-by-Step Guide:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd screener
+   ```
+
+2. **Install Required Packages:**
+   Use `pip` to install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Ensure ChromeDriver Compatibility:**
+   Make sure the version of ChromeDriver matches your Chrome browser version. `webdriver_manager` should handle this automatically.
 
 ## Usage
 
-1. **Save the script**: Save the provided script as `main.py`.
+### Running the Screener:
 
-2. **Run the script**:
-    ```bash
-    python main.py
-    ```
+The **Screener** script (`screener.py`) scrapes data from various pages and saves it to CSV files in the `output` directory. You can run it using:
 
-   The script will start running in an infinite loop, scraping data every minute and printing updates to the terminal.
+```bash
+python screener.py
+```
 
-## Script Details
+### Launching the Scraper in a New Terminal Window:
 
-### URL to Filename Mapping
+To run the scraper in a new Terminal window on macOS, use the `launch_screener.py` script:
 
-The `url_filename_map` dictionary contains mappings from the URLs of the pages to be scraped to the filenames of the CSV files where the data will be saved.
+```bash
+python launch_screener.py
+```
 
-### Country Code Mapping
+This script will open a new terminal and start the scraping process automatically.
 
-The `flag_to_country_code` dictionary maps country flag emojis to their corresponding country codes.
+## Examples
 
-### Scraping and Saving Data
+### Example 1: Running `screener.py` Directly
 
-The script uses Selenium to open each URL and BeautifulSoup to parse the HTML content. It extracts the required data from the table on the page, creates a DataFrame using Pandas, and saves it to a CSV file in the `output` directory.
+1. Navigate to the project directory:
+   ```bash
+   cd screener
+   ```
+2. Run the scraper:
+   ```bash
+   python screener.py
+   ```
+3. The scraper will start, open Chrome, and begin collecting data from multiple URLs. Once done, the data will be saved in `output` as individual CSV files, such as `usa_market.csv`, `china_market.csv`, etc.
 
-### Continuous Running
+### Example 2: Using `launch_screener.py` to Open a New Terminal
 
-The script runs in an infinite loop, with a 60-second sleep interval between each iteration, ensuring that the data is scraped continuously every minute.
+1. Make sure you are in the project directory.
+2. Run the following command:
+   ```bash
+   python launch_screener.py
+   ```
+3. A new Terminal window will open, and the scraper will start running in that window. This is helpful if you want to keep the scraping process separate from other tasks.
 
-### Issues
+### Example 3: Running the CSV Viewer
 
-There is no unit test for case where the user of this script is IP-blocked by the site which would cause the script to output bad data.
+After scraping data, you can view the collected data using the `main.py` script, which will prompt you to select a CSV file from the `output` directory:
 
-The script currently only does the first page, it should be able to do the second to the nth page after, this would require a unit test wherin nothing is found and if so, it should not continue on the specific URL.
+```bash
+python main.py
+```
 
-The script currently does not do asset classes and industries/sector pages provided by companiesmarketcap.com.
+1. Select the file you want to analyze by entering its corresponding number.
+2. The data will be displayed in a formatted table, and additional options like charts and random company focus will be shown.
 
-The script could also scrape the company logo.
+## Files Description
 
-The script should include a timestamp line in the output CSV.
+- **`screener.py`**: The main scraper script. It scrapes data from predefined URLs and saves it as CSV files.
+- **`main.py`**: A script that allows you to interactively view the data collected in the CSV files, displaying formatted tables and visualizations.
+- **`launch_screener.py`**: A script to launch the scraper in a new Terminal window on macOS.
+- **`requirements.txt`**: Lists all required packages to run the project.
+- **`output/`**: This directory is where the scraped CSV files are saved.
+
+## Notes
+
+1. **ChromeDriver Management**: The scraper uses `webdriver_manager` to handle ChromeDriver installation. It should automatically fetch the right version based on your installed Chrome browser.
+2. **Headless Mode**: The scraper runs in headless mode by default, which means Chrome will not visibly open. If you want to see Chrome in action, remove or comment out the line:
+   ```python
+   chrome_options.add_argument("--headless")
+   ```
+
+3. **Dynamic Content**: Some sites may change their HTML structure, which might cause the scraper to break. If this happens, you might need to update the selector in the `screener.py` script.
